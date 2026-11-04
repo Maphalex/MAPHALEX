@@ -48,7 +48,8 @@ html{background:#F3F7FC}
    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden border-2 border-navy-700 shadow-md group-hover:scale-105 transition-transform bg-white shrink-0"><img src="Maphalex.jpeg" alt="MAPHALEX Logo" class="w-full h-full object-cover"></div>
    <div class="flex flex-col justify-center">
      <span class="font-serif font-bold text-xl sm:text-2xl tracking-widest text-navy-800 leading-none">MAPHALEX</span>
-     <span class="text-[9px] sm:text-[10px] font-semibold tracking-wider text-navy-500 uppercase mt-1 whitespace-nowrap">PRIVATE PROP FIRM INVESTMENT TRADING COMPANY</span>
+     <!-- Slogan avec taille réduite ici -->
+     <span class="text-[8px] sm:text-[9px] font-semibold tracking-wider text-navy-500 uppercase mt-1 whitespace-nowrap">PRIVATE PROP FIRM INVESTMENT TRADING COMPANY</span>
    </div>
   </a>
   <nav id="nav" class="hidden xl:flex items-center gap-5 lg:gap-6"></nav>
@@ -188,7 +189,6 @@ document.querySelectorAll('#sections .grid,#sections .space-y-5').forEach(g=>[..
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-// Animation de comptage en boucle infinie (durée de 3.5s + pause de 2.5s avant de recommencer)
 const co=new IntersectionObserver(es=>es.forEach(e=>{
   if(!e.isIntersecting)return;
   co.unobserve(e.target);
