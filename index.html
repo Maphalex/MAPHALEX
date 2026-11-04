@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MAPHALEX | Institutional-Grade Capital Management & Trade Finance</title>
+<link rel="icon" type="image/jpeg" href="Maphalex.jpeg">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,16 +43,16 @@ html{background:#F3F7FC}
 <div id="prog" class="fixed top-0 left-0 h-1 w-full bg-navy-600 z-[60] origin-left scale-x-0"></div>
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-navy-200 shadow-sm">
- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
-  <a href="#home" class="flex items-center gap-4 group">
-   <div class="w-16 h-16 sm:w-[72px] sm:h-[72px] rounded-xl overflow-hidden border-2 border-navy-700 shadow-md group-hover:scale-105 transition-transform bg-white"><img src="Maphalex.jpeg" alt="MAPHALEX Logo" class="w-full h-full object-cover"></div>
-   <div class="flex flex-col">
-     <span class="font-serif font-bold text-2xl tracking-widest text-navy-800 leading-tight">MAPHALEX</span>
-     <span class="text-[9px] sm:text-[10px] font-semibold tracking-wider text-navy-500 uppercase mt-0.5">Private Prop Firm Investment Trading Company</span>
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
+  <a href="#home" class="flex items-center gap-3.5 group shrink-0">
+   <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden border-2 border-navy-700 shadow-md group-hover:scale-105 transition-transform bg-white shrink-0"><img src="Maphalex.jpeg" alt="MAPHALEX Logo" class="w-full h-full object-cover"></div>
+   <div class="flex flex-col justify-center">
+     <span class="font-serif font-bold text-xl sm:text-2xl tracking-widest text-navy-800 leading-none">MAPHALEX</span>
+     <span class="text-[9px] sm:text-[10px] font-semibold tracking-wider text-navy-500 uppercase mt-1 whitespace-nowrap">PRIVATE PROP FIRM INVESTMENT TRADING COMPANY</span>
    </div>
   </a>
-  <nav id="nav" class="hidden xl:flex items-center gap-7"></nav>
-  <button id="menu-btn" class="xl:hidden p-2 text-navy-700" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  <nav id="nav" class="hidden xl:flex items-center gap-5 lg:gap-6"></nav>
+  <button id="menu-btn" class="xl:hidden p-2 text-navy-700 shrink-0" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
  </div>
  <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-navy-200 px-4 pt-2 pb-6 space-y-2"></div>
 </header>
@@ -124,7 +125,7 @@ html{background:#F3F7FC}
 
 <script>
 const NAV=[['home','Home'],['about','About Us'],['model','Business Model'],['traders','Traders'],['governance','Risk & Governance'],['technology','Technology'],['markets','Trade Markets']];
-document.getElementById('nav').innerHTML=NAV.map(n=>`<a href="#${n[0]}" class="text-sm font-semibold text-navy-700 hover:text-navy-500 transition">${n[1]}</a>`).join('')+`<a href="#contact" class="px-5 py-2.5 rounded-md bg-navy-800 text-white text-sm font-semibold hover:bg-navy-600 transition shadow-md">Institutional Contact</a>`;
+document.getElementById('nav').innerHTML=NAV.map(n=>`<a href="#${n[0]}" class="text-xs lg:text-sm font-semibold text-navy-700 hover:text-navy-500 transition whitespace-nowrap">${n[1]}</a>`).join('')+`<a href="#contact" class="px-4 py-2.5 rounded-md bg-navy-800 text-white text-xs lg:text-sm font-semibold hover:bg-navy-600 transition shadow-md whitespace-nowrap">Institutional Contact</a>`;
 document.getElementById('mobile-menu').innerHTML=NAV.map(n=>`<a href="#${n[0]}" class="block py-2 text-navy-700 font-medium border-b border-navy-100">${n[1]}</a>`).join('')+`<a href="#contact" class="block text-center mt-4 py-3 bg-navy-800 text-white rounded-md font-semibold">Institutional Contact</a>`;
 document.getElementById('hero-rows').innerHTML=[['Trading Model','Proprietary Capital',''],['Daily Loss Safeguard','2.0% Maximum','font-mono'],['Execution Governance','Automated Kill-Switch','text-emerald-300'],['Custody Standard','Dual-Auth Control','']].map(r=>`<div class="flex justify-between items-center"><span class="text-navy-200">${r[0]}</span><span class="font-semibold ${r[2]}">${r[1]}</span></div>`).join('');
 
