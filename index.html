@@ -187,7 +187,10 @@ lucide.createIcons();
 document.querySelectorAll('#sections .grid,#sections .space-y-5').forEach(g=>[...g.children].forEach((c,i)=>c.style.transitionDelay=(i%6*90)+'ms'));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const t=+e.target.dataset.count,s=performance.now();(function f(n){const p=Math.min((n-s)/1600,1);e.target.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)}));
+
+// Durée du comptage augmentée à 3500ms (3.5 secondes) pour une animation plus lente et visible
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const t=+e.target.dataset.count,s=performance.now();(function f(n){const p=Math.min((n-s)/3500,1);e.target.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)}));
+
 document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
 const pr=document.getElementById('prog');
 addEventListener('scroll',()=>{pr.style.transform=`scaleX(${scrollY/(document.documentElement.scrollHeight-innerHeight)})`},{passive:true});
